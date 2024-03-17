@@ -9,8 +9,8 @@ public class PostgreContext : DbContext {
     AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true); //!para permitir usar data 'local'
   }
 
-  public DbSet<ToDoUser> Users { get; set; }
-  public DbSet<ToDoList> Lists { get; set; }
+  public DbSet<ToDoUser> ToDoUsers { get; set; }
+  public DbSet<ToDoList> ToDoLists { get; set; }
 
   protected override void OnModelCreating(ModelBuilder modelBuilder) {
     base.OnModelCreating(modelBuilder);

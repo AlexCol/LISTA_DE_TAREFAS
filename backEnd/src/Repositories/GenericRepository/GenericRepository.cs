@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 namespace backEnd.src.Repository.GenericRepository;
 
 public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity {
-  private readonly PostgreContext _context;
+  protected readonly PostgreContext _context;
   private DbSet<T> dataset;
 
   public GenericRepository(PostgreContext context) {
